@@ -1,0 +1,228 @@
+@import "./reset.css";   /* подключает файл стилей, который сбрасывает стандартные стили браузера */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap'); /* подключаем шрифт */
+
+:root {
+  /* Colors */
+  --orange: #FF922F; /* задаем переменную цвета */
+  --lightGreen: #058E6E;
+
+  /* Функциональный цвет */
+  --accent: var(--orange); /* задаем переменную цвета для акцента внимания и передаем в нее переменную с оранжевым цветом */
+  --primary: var(--lightGreen);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  width: 1250px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.header {
+  margin-bottom: 64px;
+  color: #393939;
+}
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 47px 0 26px;
+  border-bottom: 1px solid #C4C4C4;;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.header-nav {
+  display: flex;
+  column-gap: 50px; /* отступы между элементами */
+  align-items: center;
+}
+
+.header-nav__link {
+  color: #393939;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.header-nav__link:hover {
+  color: var(--accent);
+}
+
+.header-nav__link--active {  /* меняет отображение активной ссылки */
+  position: relative;
+  color: var(--accent);
+}
+
+.header-nav__link--active:after {
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  bottom: -7;
+  content: "";
+  display: block;
+  width: 33px;
+  height: 3px;
+  background-color: var(--accent);
+  border-radius: 5px;
+}
+
+.btn {
+  display: inline-block;
+  height: 44px;
+  padding: 10px 20px;
+
+  background-color: #407F55;
+  border-radius: 8px;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.btn--warning {
+  background: var(--accent);
+}
+
+.btn--nav {
+  width: 102px;
+}
+
+.btn--lg {
+  height: 62px;
+  padding: 19px 16px;
+}
+
+.btn--wide {
+  display: block;
+  width: 100%;
+}
+
+.btn--primary {
+  background-color: var(--primary);
+}
+
+.promo {
+  margin-bottom: 90px;
+}
+
+.promo__row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.promo__content {
+  padding-top: 52px;
+}
+
+.promo__subtitle {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 37px;
+  color: var(--accent);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.promo__subtitle:after {
+  position: absolute;
+  display: block;
+  content: "";
+  left: calc(100% + 24px);
+  top: 50%;
+  width: 136px;
+  height: 1px;
+  background-color: var(--accent);
+}
+
+.promo__title {
+  margin-bottom: 21px;
+  max-width: 658px;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.6;
+  letter-spacing: 0.035em;
+  color: #000;
+}
+
+.promo__title span {
+  color: var(--accent);
+}
+
+.promo__text {
+  margin-bottom: 27px;
+  max-width: 505px;
+  color: #6C6C6C;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.promo__btn {
+  max-width: 290px;
+}
+
+
+.promo__picture {
+  position: relative; 
+}
+
+.tutors-online {
+  position: absolute;
+  bottom: 49px;
+  left: -99px;
+  max-width: 238px;
+  background: #FFFFFF;
+  border-radius: 21px;
+  padding: 14px 27px 17px 35px;
+
+  filter: drop-shadow(0px 2.17488px 194.108px rgba(255, 146, 47, 0.55)) drop-shadow(0px 0.272329px 24.3053px rgba(255, 146, 47, 0.15)); /* добавляет тень на блок */
+}
+
+.tutors-online:before {
+  position: absolute;
+  top: -19px;
+  left: -18px;
+
+  display: block;
+  content: "";
+  width: 43px;
+  height: 43px;
+  background-image: url(./../img/Chart.svg);
+}
+
+.tutors-online__title {
+  margin-bottom: 12px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.tutors-online__avatars {
+  display: flex;
+
+}
+
+.tutors-online__avatars-item {
+  width: 49px;
+  height: 49px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-left: -15px;
+
+  font-size: 16px;
+  font-weight: 600;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  background-color: var(--primary);
+}
+
